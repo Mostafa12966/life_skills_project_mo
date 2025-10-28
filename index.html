@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حيّي - منصة إدارة الشكاوى السكنية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- الصفحة التقديمية -->
+    <div id="landingPage" class="page active">
+        <!-- شريط التنقل -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><i class="fas fa-home"></i> حيّي</h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="#features" class="nav-link">المميزات</a>
+                    <a href="#about" class="nav-link">عن المنصة</a>
+                    <a href="#contact" class="nav-link">اتصل بنا</a>
+                    <button class="btn btn-primary" onclick="showPage('loginPage')">تسجيل الدخول</button>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- قسم الهيرو -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>مرحباً بكم في منصة <span class="highlight">حيّي</span></h1>
+                <p>منصة متكاملة لإدارة الشكاوى والمشاكل السكنية بكل سهولة وكفاءة</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-large btn-accent" onclick="showPage('loginPage')">
+                        ابدأ الآن <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="btn btn-large btn-secondary" onclick="scrollToSection('features')">
+                        اكتشف المزيد <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>بلاغ كهرباء</h4>
+                    <p>تم الحل</p>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-tint"></i>
+                    <h4>بلاغ سباكة</h4>
+                    <p>قيد التنفيذ</p>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-trash"></i>
+                    <h4>بلاغ نظافة</h4>
+                    <p>قيد المراجعة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المميزات -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">مميزات منصتنا</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>معالجة سريعة</h3>
+                        <p>نضمن معالجة بلاغاتكم في أسرع وقت ممكن بمتابعة مستمرة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>واجهة بسيطة</h3>
+                        <p>تصميم بديهي وسهل الاستخدام لجميع الفئات العمرية</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>تقارير مفصلة</h3>
+                        <p>احصل على تقارير دورية عن حالة البلاغات والإنجازات</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>آمن ومحمي</h3>
+                        <p>بياناتكم محمية بأحدث تقنيات الأمان والخصوصية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الإحصائيات -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1,250+</div>
+                        <div class="stat-label">بلاغ معالج</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">ساكن مسجل</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">رضا العملاء</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">دعم فني</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم call to action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>جاهز للبدء؟</h2>
+                    <p>انضم إلى آلاف الساكنين الذين يستخدمون منصتنا لإدارة شكاويهم السكنية</p>
+                    <button class="btn btn-large btn-accent" onclick="showPage('loginPage')">
+                        سجل دخولك الآن <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفوتر -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3><i class="fas fa-home"></i> حيّي</h3>
+                        <p>منصة رائدة في إدارة الشكاوى السكنية، نعمل على جعل حياتكم أسهل</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>روابط سريعة</h4>
+                        <a href="#features">المميزات</a>
+                        <a href="#about">عن المنصة</a>
+                        <a href="#contact">اتصل بنا</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>اتصل بنا</h4>
+                        <p><i class="fas fa-phone"></i> 0123456789</p>
+                        <p><i class="fas fa-envelope"></i> info@myblock.com</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 حيّي. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- صفحة تسجيل الدخول -->
+    <div id="loginPage" class="page">
+        <!-- شريط التنقل -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><i class="fas fa-home"></i> حيّي</h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link" onclick="showPage('landingPage')">الصفحة الرئيسية</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="logo">
+                    <h1><i class="fas fa-home"></i> حيّي</h1>
+                    <p>منصة إدارة الشكاوى السكنية</p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                        <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userType"><i class="fas fa-user"></i> نوع المستخدم</label>
+                        <select class="form-control" id="userType" required>
+                            <option value="">اختر نوع المستخدم</option>
+                            <option value="resident">ساكن</option>
+                            <option value="admin">مسؤول</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-block">دخول</button>
+                    
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary" onclick="showPage('residentPage')">الدخول كساكن</button>
+                        <button type="button" class="btn btn-accent" onclick="showPage('adminPage')">الدخول كمسؤول</button>
+                    </div>
+                </form>
+                
+                <div class="auth-links">
+                    <p>ليس لديك حساب؟ <a href="#" id="registerLink">تسجيل حساب جديد</a></p>
+                    <p><a href="#" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- واجهة الساكن -->
+    <div id="residentPage" class="page">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-home"></i> حيّي</h2>
+                <p>واجهة الساكن</p>
+            </div>
+            
+            <ul class="sidebar-nav">
+                <li><a href="#" class="active" onclick="showResidentSection('newComplaint')"><i class="fas fa-plus-circle"></i> <span>تقديم بلاغ</span></a></li>
+                <li><a href="#" onclick="showResidentSection('myComplaints')"><i class="fas fa-list"></i> <span>متابعة بلاغاتي</span></a></li>
+                <li><a href="#" onclick="showPage('landingPage')"><i class="fas fa-sign-out-alt"></i> <span>تسجيل خروج</span></a></li>
+            </ul>
+        </div>
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+            <!-- قسم تقديم بلاغ جديد -->
+            <div id="newComplaint" class="resident-section active">
+                <div class="page-header">
+                    <h1>تقديم بلاغ جديد</h1>
+                    <p>استخدم هذا النموذج للإبلاغ عن أي مشكلة في منطقتك السكنية</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+                    </div>
+                </div>
+                
+                <div class="form-card">
+                    <form id="complaintForm">
+                        <div class="form-group">
+                            <label for="title"><i class="fas fa-heading"></i> عنوان البلاغ</label>
+                            <input type="text" class="form-control" id="title" placeholder="أدخل عنوانًا واضحًا للمشكلة" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description"><i class="fas fa-file-alt"></i> وصف المشكلة</label>
+                            <textarea class="form-control" id="description" rows="5" placeholder="صف المشكلة بالتفصيل..." required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="problemType"><i class="fas fa-tools"></i> نوع المشكلة</label>
+                                    <select class="form-control" id="problemType" required>
+                                        <option value="">اختر نوع المشكلة</option>
+                                        <option value="electricity">كهرباء</option>
+                                        <option value="plumbing">سباكة</option>
+                                        <option value="cleaning">نظافة</option>
+                                        <option value="general">عام</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="photo"><i class="fas fa-camera"></i> تحميل صورة (اختياري)</label>
+                                    <input type="file" class="form-control" id="photo" accept="image/*">
+                                    <small style="color: var(--gray-color);">يمكنك تحميل صورة توضح المشكلة (الحد الأقصى 5MB)</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-accent">
+                                <i class="fas fa-paper-plane"></i> إرسال البلاغ
+                            </button>
+                            <button type="button" class="btn btn-secondary" onclick="showResidentSection('myComplaints')">
+                                <i class="fas fa-list"></i> عرض البلاغات السابقة
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- قسم متابعة البلاغات -->
+            <div id="myComplaints" class="resident-section">
+                <div class="page-header">
+                    <h1>متابعة بلاغاتي</h1>
+                    <p>عرض وتتبع حالة جميع البلاغات التي قدمتها</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+                        <a href="#" class="nav-link" onclick="showResidentSection('newComplaint')"><i class="fas fa-plus"></i> تقديم بلاغ جديد</a>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>رقم الطلب</th>
+                                <th>عنوان البلاغ</th>
+                                <th>نوع المشكلة</th>
+                                <th>حالة الطلب</th>
+                                <th>تاريخ الإنشاء</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1001</td>
+                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
+                                <td>كهرباء</td>
+                                <td><span class="status status-pending">قيد المراجعة</span></td>
+                                <td>2023-10-15</td>
+                            </tr>
+                            <tr>
+                                <td>#1002</td>
+                                <td>تسرب مياه في الطابق الثالث</td>
+                                <td>سباكة</td>
+                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
+                                <td>2023-10-14</td>
+                            </tr>
+                            <tr>
+                                <td>#1003</td>
+                                <td>تراكم النفايات بجوار المبنى</td>
+                                <td>نظافة</td>
+                                <td><span class="status status-resolved">تم الحل</span></td>
+                                <td>2023-10-12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- واجهة الإدارة -->
+    <div id="adminPage" class="page">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-home"></i> حيّي</h2>
+                <p>لوحة الإدارة</p>
+            </div>
+            
+            <ul class="sidebar-nav">
+                <li><a href="#" class="active" onclick="showAdminSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>لوحة التحكم</span></a></li>
+                <li><a href="#" onclick="showAdminSection('complaints')"><i class="fas fa-list"></i> <span>إدارة البلاغات</span></a></li>
+                <li><a href="#" onclick="showAdminSection('users')"><i class="fas fa-users"></i> <span>إدارة المستخدمين</span></a></li>
+                <li><a href="#" onclick="showPage('landingPage')"><i class="fas fa-sign-out-alt"></i> <span>تسجيل خروج</span></a></li>
+            </ul>
+        </div>
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+            <!-- قسم لوحة التحكم -->
+            <div id="dashboard" class="admin-section active">
+                <div class="page-header">
+                    <h1>لوحة التحكم</h1>
+                    <p>نظرة عامة على البلاغات والإحصائيات</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+                        <a href="#" class="nav-link" onclick="showPage('residentPage'); showResidentSection('newComplaint');"><i class="fas fa-eye"></i> عرض واجهة الساكن</a>
+                    </div>
+                </div>
+                
+                <!-- إحصائيات سريعة -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number">150</div>
+                        <div class="stat-label">إجمالي البلاغات</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">45</div>
+                        <div class="stat-label">بلاغات مفتوحة</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">105</div>
+                        <div class="stat-label">بلاغات مغلقة</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">بلاغات جديدة</div>
+                    </div>
+                </div>
+                
+                <!-- جدول البلاغات -->
+                <div class="table-container">
+                    <div style="padding: 1rem; border-bottom: 1px solid #eee;">
+                        <h3><i class="fas fa-list"></i> أحدث البلاغات</h3>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>رقم الطلب</th>
+                                <th>عنوان البلاغ</th>
+                                <th>نوع المشكلة</th>
+                                <th>حالة الطلب</th>
+                                <th>تاريخ الإنشاء</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1001</td>
+                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
+                                <td>كهرباء</td>
+                                <td><span class="status status-pending">قيد المراجعة</span></td>
+                                <td>2023-10-15</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1002</td>
+                                <td>تسرب مياه في الطابق الثالث</td>
+                                <td>سباكة</td>
+                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
+                                <td>2023-10-14</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1003</td>
+                                <td>تراكم النفايات بجوار المبنى</td>
+                                <td>نظافة</td>
+                                <td><span class="status status-resolved">تم الحل</span></td>
+                                <td>2023-10-12</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="padding: 1rem; text-align: center; border-top: 1px solid #eee;">
+                        <button class="btn" onclick="showAdminSection('complaints')">عرض جميع البلاغات</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قسم إدارة البلاغات -->
+            <div id="complaints" class="admin-section">
+                <div class="page-header">
+                    <h1>إدارة البلاغات</h1>
+                    <p>عرض وإدارة جميع بلاغات الساكنين</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="nav-link" onclick="showAdminSection('dashboard')"><i class="fas fa-arrow-right"></i> العودة للوحة التحكم</a>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <div style="padding: 1rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                        <h3><i class="fas fa-list"></i> جميع البلاغات</h3>
+                        <div>
+                            <select class="form-control" style="display: inline-block; width: auto;">
+                                <option>جميع الحالات</option>
+                                <option>قيد المراجعة</option>
+                                <option>قيد التنفيذ</option>
+                                <option>تم الحل</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>رقم الطلب</th>
+                                <th>عنوان البلاغ</th>
+                                <th>نوع المشكلة</th>
+                                <th>الساكن</th>
+                                <th>حالة الطلب</th>
+                                <th>تاريخ الإنشاء</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1001</td>
+                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
+                                <td>كهرباء</td>
+                                <td>أحمد محمد</td>
+                                <td><span class="status status-pending">قيد المراجعة</span></td>
+                                <td>2023-10-15</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1002</td>
+                                <td>تسرب مياه في الطابق الثالث</td>
+                                <td>سباكة</td>
+                                <td>فاطمة عبدالله</td>
+                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
+                                <td>2023-10-14</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1003</td>
+                                <td>تراكم النفايات بجوار المبنى</td>
+                                <td>نظافة</td>
+                                <td>خالد إبراهيم</td>
+                                <td><span class="status status-resolved">تم الحل</span></td>
+                                <td>2023-10-12</td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- قسم إدارة المستخدمين -->
+            <div id="users" class="admin-section">
+                <div class="page-header">
+                    <h1>إدارة المستخدمين</h1>
+                    <p>عرض وإدارة حسابات المستخدمين في المنصة</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" class="nav-link" onclick="showAdminSection('dashboard')"><i class="fas fa-arrow-right"></i> العودة للوحة التحكم</a>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <div style="padding: 1rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                        <h3><i class="fas fa-users"></i> قائمة المستخدمين</h3>
+                        <button class="btn btn-accent">
+                            <i class="fas fa-plus"></i> إضافة مستخدم جديد
+                        </button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>اسم المستخدم</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>نوع المستخدم</th>
+                                <th>تاريخ التسجيل</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>أحمد محمد</td>
+                                <td>ahmed@example.com</td>
+                                <td>ساكن</td>
+                                <td>2023-09-01</td>
+                                <td><span class="status status-resolved">نشط</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فاطمة عبدالله</td>
+                                <td>fatima@example.com</td>
+                                <td>ساكن</td>
+                                <td>2023-08-15</td>
+                                <td><span class="status status-resolved">نشط</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>مسؤول النظام</td>
+                                <td>admin@myblock.com</td>
+                                <td>مسؤول</td>
+                                <td>2023-01-01</td>
+                                <td><span class="status status-resolved">نشط</span></td>
+                                <td>
+                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // دالة للتنقل بين الصفحات الرئيسية
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // إظهار الصفحة المطلوبة
+            document.getElementById(pageId).classList.add('active');
+            
+            // إرجاع الصفحة للأعلى
+            window.scrollTo(0, 0);
+        }
+
+        // دالة للتمرير إلى قسم معين
+        function scrollToSection(sectionId) {
+            if (document.getElementById(sectionId)) {
+                document.getElementById(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // دالة للتنقل بين أقسام واجهة الساكن
+        function showResidentSection(sectionId) {
+            // إخفاء جميع الأقسام
+            document.querySelectorAll('.resident-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // إظهار القسم المطلوب
+            document.getElementById(sectionId).classList.add('active');
+            
+            // تحديث القائمة الجانبية النشطة
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            if (sectionId === 'newComplaint') {
+                document.querySelector('.sidebar-nav a:nth-child(1)').classList.add('active');
+            } else if (sectionId === 'myComplaints') {
+                document.querySelector('.sidebar-nav a:nth-child(2)').classList.add('active');
+            }
+        }
+
+        // دالة للتنقل بين أقسام واجهة الإدارة
+        function showAdminSection(sectionId) {
+            // إخفاء جميع الأقسام
+            document.querySelectorAll('.admin-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // إظهار القسم المطلوب
+            document.getElementById(sectionId).classList.add('active');
+            
+            // تحديث القائمة الجانبية النشطة
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            if (sectionId === 'dashboard') {
+                document.querySelector('.sidebar-nav a:nth-child(1)').classList.add('active');
+            } else if (sectionId === 'complaints') {
+                document.querySelector('.sidebar-nav a:nth-child(2)').classList.add('active');
+            } else if (sectionId === 'users') {
+                document.querySelector('.sidebar-nav a:nth-child(3)').classList.add('active');
+            }
+        }
+
+        // معالجة تسجيل الدخول
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const userType = document.getElementById('userType').value;
+            
+            if (!email || !password || !userType) {
+                alert('يرجى ملء جميع الحقول');
+                return;
+            }
+            
+            // في التطبيق الحقيقي، هنا سيتم إرسال البيانات للخادم
+            alert('تم تسجيل الدخول بنجاح!');
+            
+            // التوجيه بناءً على نوع المستخدم
+            if (userType === 'resident') {
+                showPage('residentPage');
+            } else if (userType === 'admin') {
+                showPage('adminPage');
+            }
+        });
+        
+        // معالجة تقديم البلاغ
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const problemType = document.getElementById('problemType').value;
+            
+            if (!title || !description || !problemType) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+            
+            // في التطبيق الحقيقي، هنا سيتم إرسال البيانات للخادم
+            alert('تم تقديم البلاغ بنجاح! سيتم متابعته من قبل الإدارة.');
+            
+            // إعادة تعيين النموذج
+            this.reset();
+        });
+
+        // معالجة رابط التسجيل
+        document.getElementById('registerLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('سيتم توجيهك إلى صفحة التسجيل - هذه الميزة قيد التطوير');
+        });
+
+        // تفعيل القائمة المتنقلة
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
