@@ -3,741 +3,995 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حيّي - منصة إدارة الشكاوى السكنية</title>
+    <title>Smart City - منصة المدينة الذكية</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- الصفحة التقديمية -->
-    <div id="landingPage" class="page active">
-        <!-- شريط التنقل -->
+    <!-- الصفحة الرئيسية -->
+    <div id="homePage" class="page active">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h1><i class="fas fa-home"></i> حيّي</h1>
+                    <h1><i class="fas fa-city"></i> Smart City</h1>
                 </div>
                 <div class="nav-menu">
-                    <a href="#features" class="nav-link">المميزات</a>
-                    <a href="#about" class="nav-link">عن المنصة</a>
-                    <a href="#contact" class="nav-link">اتصل بنا</a>
-                    <button class="btn btn-primary" onclick="showPage('loginPage')">تسجيل الدخول</button>
-                </div>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <a href="#" class="nav-link" onclick="showSection('services')">الخدمات</a>
+                    <a href="#" class="nav-link" onclick="showSection('about')">عن المنصة</a>
+                    <button class="btn btn-primary" onclick="showPage('authPage')">تسجيل الدخول</button>
                 </div>
             </div>
         </nav>
 
-        <!-- قسم الهيرو -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>مرحباً بكم في منصة <span class="highlight">حيّي</span></h1>
-                <p>منصة متكاملة لإدارة الشكاوى والمشاكل السكنية بكل سهولة وكفاءة</p>
+                <h1>مدينتك الذكية <span class="highlight">بين يديك</span></h1>
+                <p>نظام متكامل للبلاغات والخدمات بمستوى احترافي</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-large btn-accent" onclick="showPage('loginPage')">
+                    <button class="btn btn-large btn-primary" onclick="showPage('authPage')">
                         ابدأ الآن <i class="fas fa-arrow-left"></i>
                     </button>
-                    <button class="btn btn-large btn-secondary" onclick="scrollToSection('features')">
-                        اكتشف المزيد <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <i class="fas fa-bolt"></i>
-                    <h4>بلاغ كهرباء</h4>
-                    <p>تم الحل</p>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-tint"></i>
-                    <h4>بلاغ سباكة</h4>
-                    <p>قيد التنفيذ</p>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-trash"></i>
-                    <h4>بلاغ نظافة</h4>
-                    <p>قيد المراجعة</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم المميزات -->
-        <section id="features" class="features-section">
-            <div class="container">
-                <h2 class="section-title">مميزات منصتنا</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>معالجة سريعة</h3>
-                        <p>نضمن معالجة بلاغاتكم في أسرع وقت ممكن بمتابعة مستمرة</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>واجهة بسيطة</h3>
-                        <p>تصميم بديهي وسهل الاستخدام لجميع الفئات العمرية</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>تقارير مفصلة</h3>
-                        <p>احصل على تقارير دورية عن حالة البلاغات والإنجازات</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>آمن ومحمي</h3>
-                        <p>بياناتكم محمية بأحدث تقنيات الأمان والخصوصية</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم الإحصائيات -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">1,250+</div>
-                        <div class="stat-label">بلاغ معالج</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">ساكن مسجل</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">رضا العملاء</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">دعم فني</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم call to action -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>جاهز للبدء؟</h2>
-                    <p>انضم إلى آلاف الساكنين الذين يستخدمون منصتنا لإدارة شكاويهم السكنية</p>
-                    <button class="btn btn-large btn-accent" onclick="showPage('loginPage')">
-                        سجل دخولك الآن <i class="fas fa-arrow-left"></i>
+                    <button class="btn btn-large btn-secondary">
+                        شاهد الخدمات <i class="fas fa-eye"></i>
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- الفوتر -->
-        <footer class="footer">
+        <!-- قسم الخدمات -->
+        <section id="services" class="services-section">
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3><i class="fas fa-home"></i> حيّي</h3>
-                        <p>منصة رائدة في إدارة الشكاوى السكنية، نعمل على جعل حياتكم أسهل</p>
+                <h2 class="section-title">خدماتنا المتكاملة</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-faucet"></i>
+                        </div>
+                        <h3>خدمات السباكة</h3>
+                        <p>إصلاح تسربات المياه والتمديدات والصرف الصحي</p>
+                        <div class="service-workers">
+                            <div class="worker-avatar">
+                                <img src="images/worker1.jpg" alt="محمد أحمد - سباك">
+                                <span>محمد أحمد</span>
+                            </div>
+                            <div class="worker-avatar">
+                                <img src="images/worker2.jpg" alt="أحمد علي - سباك">
+                                <span>أحمد علي</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-section">
-                        <h4>روابط سريعة</h4>
-                        <a href="#features">المميزات</a>
-                        <a href="#about">عن المنصة</a>
-                        <a href="#contact">اتصل بنا</a>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>خدمات الكهرباء</h3>
+                        <p>إصلاح أعطال الكهرباء والتركيبات والإنارة</p>
+                        <div class="service-workers">
+                            <div class="worker-avatar">
+                                <img src="images/worker3.jpg" alt="خالد محمود - كهربائي">
+                                <span>خالد محمود</span>
+                            </div>
+                            <div class="worker-avatar">
+                                <img src="images/worker4.jpg" alt="محمود سعيد - كهربائي">
+                                <span>محمود سعيد</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-section">
-                        <h4>اتصل بنا</h4>
-                        <p><i class="fas fa-phone"></i> 0123456789</p>
-                        <p><i class="fas fa-envelope"></i> info@myblock.com</p>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3>خدمات النجارة</h3>
+                        <p>أعمال النجارة والديكور والأثاث المنزلي</p>
+                        <div class="service-workers">
+                            <div class="worker-avatar">
+                                <img src="images/worker5.jpg" alt="سعيد حسن - نجار">
+                                <span>سعيد حسن</span>
+                            </div>
+                            <div class="worker-avatar">
+                                <img src="images/worker6.jpg" alt="حسن محمد - نجار">
+                                <span>حسن محمد</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 حيّي. جميع الحقوق محفوظة.</p>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- قسم عن المنصة -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">عن منصة Smart City</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>منصة رقمية متكاملة تربط بين السكان ومقدمي الخدمات</h3>
+                        <p>نقدم حلولاً ذكية لإدارة الخدمات المنزلية والصيانة في المدن الذكية، مع ضمان الجودة والكفاءة في تقديم الخدمات.</p>
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>أكثر من 100 صنايعي محترف</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>خدمات 24/7 على مدار الساعة</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>تقييم ومراجعة للخدمات</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>أسعار تنافسية وشفافة</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">عميل راضي</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">صنايعي محترف</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">رضا العملاء</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- صفحة التسجيل -->
+    <div id="authPage" class="page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2><i class="fas fa-user-plus"></i> إنشاء حساب جديد</h2>
+                    <p>انضم إلى منصة المدينة الذكية</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="fullName"><i class="fas fa-user"></i> الاسم الكامل</label>
+                        <input type="text" id="fullName" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword"><i class="fas fa-lock"></i> تأكيد كلمة المرور</label>
+                        <input type="password" id="confirmPassword" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userType"><i class="fas fa-users"></i> نوع الحساب</label>
+                        <select id="userType" class="form-control" required>
+                            <option value="">اختر نوع الحساب</option>
+                            <option value="resident">ساكن</option>
+                            <option value="worker">صنايعي</option>
+                            <option value="admin">مسؤول</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-user-plus"></i> إنشاء حساب
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>لديك حساب already? <a href="#" onclick="showLogin()">سجل دخول</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- صفحة تسجيل الدخول -->
     <div id="loginPage" class="page">
-        <!-- شريط التنقل -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1><i class="fas fa-home"></i> حيّي</h1>
-                </div>
-                <div class="nav-menu">
-                    <a href="#" class="nav-link" onclick="showPage('landingPage')">الصفحة الرئيسية</a>
-                </div>
-            </div>
-        </nav>
-
         <div class="auth-container">
             <div class="auth-card">
-                <div class="logo">
-                    <h1><i class="fas fa-home"></i> حيّي</h1>
-                    <p>منصة إدارة الشكاوى السكنية</p>
+                <div class="auth-header">
+                    <h2><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</h2>
+                    <p>مرحباً بعودتك إلى المنصة</p>
                 </div>
-                
-                <form id="loginForm">
+
+                <form id="loginForm" class="auth-form">
                     <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
-                        <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <label for="loginEmail"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" id="loginEmail" class="form-control" required>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="password"><i class="fas fa-lock"></i> كلمة المرور</label>
-                        <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور" required>
+                        <label for="loginPassword"><i class="fas fa-lock"></i> كلمة المرور</label>
+                        <input type="password" id="loginPassword" class="form-control" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="userType"><i class="fas fa-user"></i> نوع المستخدم</label>
-                        <select class="form-control" id="userType" required>
-                            <option value="">اختر نوع المستخدم</option>
-                            <option value="resident">ساكن</option>
-                            <option value="admin">مسؤول</option>
-                        </select>
+
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <span>تذكرني</span>
+                        </label>
+                        <a href="#" onclick="showForgotPassword()">نسيت كلمة المرور؟</a>
                     </div>
-                    
-                    <button type="submit" class="btn btn-block">دخول</button>
-                    
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary" onclick="showPage('residentPage')">الدخول كساكن</button>
-                        <button type="button" class="btn btn-accent" onclick="showPage('adminPage')">الدخول كمسؤول</button>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                    </button>
+
+                    <div class="social-login">
+                        <p>أو سجل الدخول باستخدام:</p>
+                        <div class="social-buttons">
+                            <button type="button" class="btn btn-google">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="btn btn-facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </button>
+                        </div>
                     </div>
                 </form>
-                
-                <div class="auth-links">
-                    <p>ليس لديك حساب؟ <a href="#" id="registerLink">تسجيل حساب جديد</a></p>
-                    <p><a href="#" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a></p>
+
+                <div class="auth-footer">
+                    <p>ليس لديك حساب؟ <a href="#" onclick="showRegister()">أنشئ حساب جديد</a></p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- واجهة الساكن -->
-    <div id="residentPage" class="page">
-        <!-- الشريط الجانبي -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h2><i class="fas fa-home"></i> حيّي</h2>
-                <p>واجهة الساكن</p>
-            </div>
-            
-            <ul class="sidebar-nav">
-                <li><a href="#" class="active" onclick="showResidentSection('newComplaint')"><i class="fas fa-plus-circle"></i> <span>تقديم بلاغ</span></a></li>
-                <li><a href="#" onclick="showResidentSection('myComplaints')"><i class="fas fa-list"></i> <span>متابعة بلاغاتي</span></a></li>
-                <li><a href="#" onclick="showPage('landingPage')"><i class="fas fa-sign-out-alt"></i> <span>تسجيل خروج</span></a></li>
-            </ul>
-        </div>
-        
-        <!-- المحتوى الرئيسي -->
-        <div class="main-content">
-            <!-- قسم تقديم بلاغ جديد -->
-            <div id="newComplaint" class="resident-section active">
-                <div class="page-header">
-                    <h1>تقديم بلاغ جديد</h1>
-                    <p>استخدم هذا النموذج للإبلاغ عن أي مشكلة في منطقتك السكنية</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+    <!-- لوحة تحكم الساكن -->
+    <div id="residentDashboard" class="page">
+        <div class="dashboard-container">
+            <!-- الشريط الجانبي -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="user-info">
+                        <img src="images/user-avatar.jpg" alt="صورة المستخدم" class="user-avatar">
+                        <h3>أحمد محمد</h3>
+                        <span class="user-role">ساكن</span>
                     </div>
                 </div>
-                
-                <div class="form-card">
-                    <form id="complaintForm">
-                        <div class="form-group">
-                            <label for="title"><i class="fas fa-heading"></i> عنوان البلاغ</label>
-                            <input type="text" class="form-control" id="title" placeholder="أدخل عنوانًا واضحًا للمشكلة" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="description"><i class="fas fa-file-alt"></i> وصف المشكلة</label>
-                            <textarea class="form-control" id="description" rows="5" placeholder="صف المشكلة بالتفصيل..." required></textarea>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-col">
-                                <div class="form-group">
-                                    <label for="problemType"><i class="fas fa-tools"></i> نوع المشكلة</label>
-                                    <select class="form-control" id="problemType" required>
-                                        <option value="">اختر نوع المشكلة</option>
-                                        <option value="electricity">كهرباء</option>
-                                        <option value="plumbing">سباكة</option>
-                                        <option value="cleaning">نظافة</option>
-                                        <option value="general">عام</option>
-                                    </select>
-                                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" onclick="showDashboardSection('residentComplaints')">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>بلاغاتي</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('residentServices')">
+                        <i class="fas fa-tools"></i>
+                        <span>الخدمات</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('residentNewComplaint')">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>بلاغ جديد</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showDashboardSection('residentProfile')">
+                        <i class="fas fa-user-cog"></i>
+                        <span>الملف الشخصي</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showPage('homePage')">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>تسجيل خروج</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- المحتوى الرئيسي -->
+            <div class="dashboard-content">
+                <!-- قسم البلاغات -->
+                <div id="residentComplaints" class="dashboard-section active">
+                    <div class="section-header">
+                        <h2><i class="fas fa-exclamation-circle"></i> بلاغاتي</h2>
+                        <button class="btn btn-primary" onclick="showDashboardSection('residentNewComplaint')">
+                            <i class="fas fa-plus"></i> بلاغ جديد
+                        </button>
+                    </div>
+                    
+                    <div class="complaints-list">
+                        <div class="complaint-card">
+                            <div class="complaint-header">
+                                <h4>انقطاع التيار الكهربائي</h4>
+                                <span class="status-badge pending">قيد المراجعة</span>
                             </div>
-                            
-                            <div class="form-col">
-                                <div class="form-group">
-                                    <label for="photo"><i class="fas fa-camera"></i> تحميل صورة (اختياري)</label>
-                                    <input type="file" class="form-control" id="photo" accept="image/*">
-                                    <small style="color: var(--gray-color);">يمكنك تحميل صورة توضح المشكلة (الحد الأقصى 5MB)</small>
-                                </div>
+                            <p class="complaint-desc">انقطاع التيار في المبنى أ منذ ساعتين</p>
+                            <div class="complaint-footer">
+                                <span class="complaint-date">2024-01-15</span>
+                                <span class="complaint-type">كهرباء</span>
                             </div>
                         </div>
-                        
-                        <div class="btn-group">
-                            <button type="submit" class="btn btn-accent">
-                                <i class="fas fa-paper-plane"></i> إرسال البلاغ
-                            </button>
-                            <button type="button" class="btn btn-secondary" onclick="showResidentSection('myComplaints')">
-                                <i class="fas fa-list"></i> عرض البلاغات السابقة
-                            </button>
+
+                        <div class="complaint-card">
+                            <div class="complaint-header">
+                                <h4>تسرب مياه في الحمام</h4>
+                                <span class="status-badge in-progress">جاري المعالجة</span>
+                            </div>
+                            <p class="complaint-desc">تسرب مياه من السقف في الحمام الرئيسي</p>
+                            <div class="complaint-footer">
+                                <span class="complaint-date">2024-01-14</span>
+                                <span class="complaint-type">سباكة</span>
+                            </div>
                         </div>
+
+                        <div class="complaint-card">
+                            <div class="complaint-header">
+                                <h4>أعمال نجارة</h4>
+                                <span class="status-badge completed">مكتمل</span>
+                            </div>
+                            <p class="complaint-desc">إصلاح باب الغرفة الرئيسية</p>
+                            <div class="complaint-footer">
+                                <span class="complaint-date">2024-01-10</span>
+                                <span class="complaint-type">نجارة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- قسم تقديم بلاغ جديد -->
+                <div id="residentNewComplaint" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-plus-circle"></i> تقديم بلاغ جديد</h2>
+                    </div>
+                    
+                    <form class="complaint-form">
+                        <div class="form-group">
+                            <label for="complaintType">نوع المشكلة</label>
+                            <select id="complaintType" class="form-control" required>
+                                <option value="">اختر نوع المشكلة</option>
+                                <option value="electricity">كهرباء</option>
+                                <option value="plumbing">سباكة</option>
+                                <option value="carpentry">نجارة</option>
+                                <option value="cleaning">نظافة</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintTitle">عنوان البلاغ</label>
+                            <input type="text" id="complaintTitle" class="form-control" placeholder="اكتب عنواناً واضحاً للمشكلة" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintDescription">وصف المشكلة</label>
+                            <textarea id="complaintDescription" class="form-control" rows="5" placeholder="صف المشكلة بالتفصيل..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintLocation">موقع المشكلة</label>
+                            <input type="text" id="complaintLocation" class="form-control" placeholder="أدخل موقع المشكلة بالتفصيل" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complaintPhotos">إضافة صور (اختياري)</label>
+                            <input type="file" id="complaintPhotos" class="form-control" multiple accept="image/*">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> إرسال البلاغ
+                        </button>
                     </form>
                 </div>
-            </div>
 
-            <!-- قسم متابعة البلاغات -->
-            <div id="myComplaints" class="resident-section">
-                <div class="page-header">
-                    <h1>متابعة بلاغاتي</h1>
-                    <p>عرض وتتبع حالة جميع البلاغات التي قدمتها</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
-                        <a href="#" class="nav-link" onclick="showResidentSection('newComplaint')"><i class="fas fa-plus"></i> تقديم بلاغ جديد</a>
+                <!-- قسم الخدمات -->
+                <div id="residentServices" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-tools"></i> خدمات المدينة</h2>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <div class="service-card" onclick="showServiceDetails('plumbing')">
+                            <div class="service-icon">
+                                <i class="fas fa-faucet"></i>
+                            </div>
+                            <h4>سباكة</h4>
+                            <p>إصلاح تسربات المياه والتمديدات</p>
+                            <div class="service-meta">
+                                <span class="rating">4.8 <i class="fas fa-star"></i></span>
+                                <span class="price">يبدأ من 100 جنيه</span>
+                            </div>
+                        </div>
+
+                        <div class="service-card" onclick="showServiceDetails('electricity')">
+                            <div class="service-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4>كهرباء</h4>
+                            <p>إصلاح أعطال الكهرباء والتركيبات</p>
+                            <div class="service-meta">
+                                <span class="rating">4.9 <i class="fas fa-star"></i></span>
+                                <span class="price">يبدأ من 150 جنيه</span>
+                            </div>
+                        </div>
+
+                        <div class="service-card" onclick="showServiceDetails('carpentry')">
+                            <div class="service-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h4>نجارة</h4>
+                            <p>أعمال النجارة والديكور المنزلي</p>
+                            <div class="service-meta">
+                                <span class="rating">4.7 <i class="fas fa-star"></i></span>
+                                <span class="price">يبدأ من 200 جنيه</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="table-container">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>رقم الطلب</th>
-                                <th>عنوان البلاغ</th>
-                                <th>نوع المشكلة</th>
-                                <th>حالة الطلب</th>
-                                <th>تاريخ الإنشاء</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#1001</td>
-                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
-                                <td>كهرباء</td>
-                                <td><span class="status status-pending">قيد المراجعة</span></td>
-                                <td>2023-10-15</td>
-                            </tr>
-                            <tr>
-                                <td>#1002</td>
-                                <td>تسرب مياه في الطابق الثالث</td>
-                                <td>سباكة</td>
-                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
-                                <td>2023-10-14</td>
-                            </tr>
-                            <tr>
-                                <td>#1003</td>
-                                <td>تراكم النفايات بجوار المبنى</td>
-                                <td>نظافة</td>
-                                <td><span class="status status-resolved">تم الحل</span></td>
-                                <td>2023-10-12</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <!-- قسم الملف الشخصي -->
+                <div id="residentProfile" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-user-cog"></i> الملف الشخصي</h2>
+                    </div>
+                    
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <img src="images/user-avatar.jpg" alt="صورة المستخدم">
+                                <button class="btn-change-avatar">تغيير الصورة</button>
+                            </div>
+                            <div class="profile-info">
+                                <h3>أحمد محمد</h3>
+                                <p>ahmed.mohamed@example.com</p>
+                                <span class="user-badge">عميل نشط</span>
+                            </div>
+                        </div>
+
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileName">الاسم الكامل</label>
+                                    <input type="text" id="profileName" class="form-control" value="أحمد محمد">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePhone">رقم الهاتف</label>
+                                    <input type="tel" id="profilePhone" class="form-control" value="+201234567890">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileAddress">العنوان</label>
+                                <textarea id="profileAddress" class="form-control" rows="3">شارع النصر، مدينة نصر، القاهرة</textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileEmail">البريد الإلكتروني</label>
+                                    <input type="email" id="profileEmail" class="form-control" value="ahmed.mohamed@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileBuilding">المبنى</label>
+                                    <input type="text" id="profileBuilding" class="form-control" value="المبنى أ">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> حفظ التغييرات
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- واجهة الإدارة -->
-    <div id="adminPage" class="page">
-        <!-- الشريط الجانبي -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h2><i class="fas fa-home"></i> حيّي</h2>
-                <p>لوحة الإدارة</p>
-            </div>
-            
-            <ul class="sidebar-nav">
-                <li><a href="#" class="active" onclick="showAdminSection('dashboard')"><i class="fas fa-tachometer-alt"></i> <span>لوحة التحكم</span></a></li>
-                <li><a href="#" onclick="showAdminSection('complaints')"><i class="fas fa-list"></i> <span>إدارة البلاغات</span></a></li>
-                <li><a href="#" onclick="showAdminSection('users')"><i class="fas fa-users"></i> <span>إدارة المستخدمين</span></a></li>
-                <li><a href="#" onclick="showPage('landingPage')"><i class="fas fa-sign-out-alt"></i> <span>تسجيل خروج</span></a></li>
-            </ul>
-        </div>
-        
-        <!-- المحتوى الرئيسي -->
-        <div class="main-content">
-            <!-- قسم لوحة التحكم -->
-            <div id="dashboard" class="admin-section active">
-                <div class="page-header">
-                    <h1>لوحة التحكم</h1>
-                    <p>نظرة عامة على البلاغات والإحصائيات</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="nav-link" onclick="showPage('landingPage')"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
-                        <a href="#" class="nav-link" onclick="showPage('residentPage'); showResidentSection('newComplaint');"><i class="fas fa-eye"></i> عرض واجهة الساكن</a>
+    <!-- لوحة تحكم الصنايعي -->
+    <div id="workerDashboard" class="page">
+        <div class="dashboard-container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="user-info">
+                        <img src="images/worker-profile.jpg" alt="صورة الصنايعي" class="user-avatar">
+                        <h3>محمد أحمد</h3>
+                        <span class="user-role">سباك محترف</span>
+                        <div class="worker-rating">
+                            <span>4.8</span>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- إحصائيات سريعة -->
-                <div class="stats-container">
-                    <div class="stat-card">
-                        <div class="stat-number">150</div>
-                        <div class="stat-label">إجمالي البلاغات</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">45</div>
-                        <div class="stat-label">بلاغات مفتوحة</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">105</div>
-                        <div class="stat-label">بلاغات مغلقة</div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-number">12</div>
-                        <div class="stat-label">بلاغات جديدة</div>
-                    </div>
-                </div>
-                
-                <!-- جدول البلاغات -->
-                <div class="table-container">
-                    <div style="padding: 1rem; border-bottom: 1px solid #eee;">
-                        <h3><i class="fas fa-list"></i> أحدث البلاغات</h3>
-                    </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>رقم الطلب</th>
-                                <th>عنوان البلاغ</th>
-                                <th>نوع المشكلة</th>
-                                <th>حالة الطلب</th>
-                                <th>تاريخ الإنشاء</th>
-                                <th>الإجراءات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#1001</td>
-                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
-                                <td>كهرباء</td>
-                                <td><span class="status status-pending">قيد المراجعة</span></td>
-                                <td>2023-10-15</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#1002</td>
-                                <td>تسرب مياه في الطابق الثالث</td>
-                                <td>سباكة</td>
-                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
-                                <td>2023-10-14</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#1003</td>
-                                <td>تراكم النفايات بجوار المبنى</td>
-                                <td>نظافة</td>
-                                <td><span class="status status-resolved">تم الحل</span></td>
-                                <td>2023-10-12</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div style="padding: 1rem; text-align: center; border-top: 1px solid #eee;">
-                        <button class="btn" onclick="showAdminSection('complaints')">عرض جميع البلاغات</button>
-                    </div>
-                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" onclick="showWorkerSection('workerOrders')">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>طلباتي</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showWorkerSection('workerProfile')">
+                        <i class="fas fa-user-edit"></i>
+                        <span>الملف الشخصي</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showWorkerSection('workerSchedule')">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>جدول المواعيد</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showWorkerSection('workerEarnings')">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>الأرباح</span>
+                    </a>
+                </nav>
             </div>
 
-            <!-- قسم إدارة البلاغات -->
-            <div id="complaints" class="admin-section">
-                <div class="page-header">
-                    <h1>إدارة البلاغات</h1>
-                    <p>عرض وإدارة جميع بلاغات الساكنين</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="nav-link" onclick="showAdminSection('dashboard')"><i class="fas fa-arrow-right"></i> العودة للوحة التحكم</a>
-                    </div>
-                </div>
-                
-                <div class="table-container">
-                    <div style="padding: 1rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                        <h3><i class="fas fa-list"></i> جميع البلاغات</h3>
-                        <div>
-                            <select class="form-control" style="display: inline-block; width: auto;">
-                                <option>جميع الحالات</option>
-                                <option>قيد المراجعة</option>
+            <div class="dashboard-content">
+                <div id="workerOrders" class="dashboard-section active">
+                    <div class="section-header">
+                        <h2><i class="fas fa-clipboard-list"></i> طلبات الخدمات</h2>
+                        <div class="orders-filter">
+                            <select class="form-control">
+                                <option>جميع الطلبات</option>
+                                <option>طلبات جديدة</option>
                                 <option>قيد التنفيذ</option>
-                                <option>تم الحل</option>
+                                <option>مكتملة</option>
                             </select>
                         </div>
                     </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>رقم الطلب</th>
-                                <th>عنوان البلاغ</th>
-                                <th>نوع المشكلة</th>
-                                <th>الساكن</th>
-                                <th>حالة الطلب</th>
-                                <th>تاريخ الإنشاء</th>
-                                <th>الإجراءات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#1001</td>
-                                <td>انقطاع التيار الكهربائي في المبنى أ</td>
-                                <td>كهرباء</td>
-                                <td>أحمد محمد</td>
-                                <td><span class="status status-pending">قيد المراجعة</span></td>
-                                <td>2023-10-15</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#1002</td>
-                                <td>تسرب مياه في الطابق الثالث</td>
-                                <td>سباكة</td>
-                                <td>فاطمة عبدالله</td>
-                                <td><span class="status status-in-progress">قيد التنفيذ</span></td>
-                                <td>2023-10-14</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#1003</td>
-                                <td>تراكم النفايات بجوار المبنى</td>
-                                <td>نظافة</td>
-                                <td>خالد إبراهيم</td>
-                                <td><span class="status status-resolved">تم الحل</span></td>
-                                <td>2023-10-12</td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                    <div class="orders-list">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <h4>إصلاح تسرب مياه</h4>
+                                <span class="order-price">150 جنيه</span>
+                            </div>
+                            <p class="order-desc">تسرب مياه في الحمام الرئيسي - يحتاج إلى فحص وصيانة</p>
+                            <div class="order-client">
+                                <img src="images/client1.jpg" alt="العميل">
+                                <div class="client-info">
+                                    <h5>أحمد محمود</h5>
+                                    <span>شارع النصر، مدينة نصر</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-date">منذ 2 ساعة</span>
+                                <div class="order-actions">
+                                    <button class="btn btn-sm btn-primary">قبول الطلب</button>
+                                    <button class="btn btn-sm btn-secondary">رفض</button>
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- قسم إدارة المستخدمين -->
-            <div id="users" class="admin-section">
-                <div class="page-header">
-                    <h1>إدارة المستخدمين</h1>
-                    <p>عرض وإدارة حسابات المستخدمين في المنصة</p>
-                    <div style="margin-top: 1rem;">
-                        <a href="#" class="nav-link" onclick="showAdminSection('dashboard')"><i class="fas fa-arrow-right"></i> العودة للوحة التحكم</a>
+                        <div class="order-card">
+                            <div class="order-header">
+                                <h4>تركيب حنفية جديدة</h4>
+                                <span class="order-price">200 جنيه</span>
+                            </div>
+                            <p class="order-desc">تركيب حنفية مطبخ جديدة مع توصيلات المياه</p>
+                            <div class="order-client">
+                                <img src="images/client2.jpg" alt="العميل">
+                                <div class="client-info">
+                                    <h5>سارة خالد</h5>
+                                    <span>حي الأندلس، المعادي</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <span class="order-date">منذ 5 ساعات</span>
+                                <div class="order-actions">
+                                    <button class="btn btn-sm btn-primary">قبول الطلب</button>
+                                    <button class="btn btn-sm btn-secondary">رفض</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="table-container">
-                    <div style="padding: 1rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                        <h3><i class="fas fa-users"></i> قائمة المستخدمين</h3>
-                        <button class="btn btn-accent">
-                            <i class="fas fa-plus"></i> إضافة مستخدم جديد
+
+                <div id="workerProfile" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-user-edit"></i> الملف الشخصي</h2>
+                    </div>
+                    
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <img src="images/worker-profile.jpg" alt="صورة الصنايعي">
+                                <button class="btn-change-avatar">تغيير الصورة</button>
+                            </div>
+                            <div class="profile-info">
+                                <h3>محمد أحمد</h3>
+                                <p>سباك محترف</p>
+                                <div class="worker-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">47</span>
+                                        <span class="stat-label">مهمة مكتملة</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">4.8</span>
+                                        <span class="stat-label">تقييم</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="workerName">الاسم الكامل</label>
+                                    <input type="text" id="workerName" class="form-control" value="محمد أحمد">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workerSpecialty">التخصص</label>
+                                    <select id="workerSpecialty" class="form-control">
+                                        <option value="plumbing">سباكة</option>
+                                        <option value="electricity">كهرباء</option>
+                                        <option value="carpentry">نجارة</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workerBio">نبذة عني</label>
+                                <textarea id="workerBio" class="form-control" rows="4">سباك محترف بخبرة 8 سنوات في مجال السباكة المنزلية والتجارية. متخصص في إصلاح التسربات وتركيب التمديدات.</textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="workerPhone">رقم الهاتف</label>
+                                    <input type="tel" id="workerPhone" class="form-control" value="+201098765432">
+                                </div>
+                                <div class="form-group">
+                                    <label for="workerExperience">سنوات الخبرة</label>
+                                    <input type="number" id="workerExperience" class="form-control" value="8">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workerServices">الخدمات المقدمة</label>
+                                <div class="services-tags">
+                                    <span class="service-tag">إصلاح تسربات المياه</span>
+                                    <span class="service-tag">تركيب التمديدات</span>
+                                    <span class="service-tag">صيانة الحنفيات</span>
+                                    <span class="service-tag">تنظيف البالوعات</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> حفظ التغييرات
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="workerSchedule" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-calendar-alt"></i> جدول المواعيد</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> إضافة موعد
                         </button>
                     </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>اسم المستخدم</th>
-                                <th>البريد الإلكتروني</th>
-                                <th>نوع المستخدم</th>
-                                <th>تاريخ التسجيل</th>
-                                <th>الحالة</th>
-                                <th>الإجراءات</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>أحمد محمد</td>
-                                <td>ahmed@example.com</td>
-                                <td>ساكن</td>
-                                <td>2023-09-01</td>
-                                <td><span class="status status-resolved">نشط</span></td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>فاطمة عبدالله</td>
-                                <td>fatima@example.com</td>
-                                <td>ساكن</td>
-                                <td>2023-08-15</td>
-                                <td><span class="status status-resolved">نشط</span></td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>مسؤول النظام</td>
-                                <td>admin@myblock.com</td>
-                                <td>مسؤول</td>
-                                <td>2023-01-01</td>
-                                <td><span class="status status-resolved">نشط</span></td>
-                                <td>
-                                    <button class="btn" style="padding: 0.25rem 0.5rem; font-size: 0.85rem;">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    
+                    <div class="schedule-calendar">
+                        <div class="calendar-header">
+                            <button class="btn btn-sm btn-secondary">
+                                <i class="fas fa-chevron-right"></i> الأسبوع الماضي
+                            </button>
+                            <h4>الأسبوع الحالي: 15 - 21 يناير 2024</h4>
+                            <button class="btn btn-sm btn-secondary">
+                                الأسبوع القادم <i class="fas fa-chevron-left"></i>
+                            </button>
+                        </div>
+
+                        <div class="schedule-grid">
+                            <div class="day-column">
+                                <div class="day-header">الأحد</div>
+                                <div class="appointments">
+                                    <div class="appointment">
+                                        <span class="appointment-time">10:00 ص</span>
+                                        <span class="appointment-title">تركيب حنفية</span>
+                                        <span class="appointment-client">أحمد محمود</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day-column">
+                                <div class="day-header">الإثنين</div>
+                                <div class="appointments">
+                                    <div class="appointment">
+                                        <span class="appointment-time">02:00 م</span>
+                                        <span class="appointment-title">إصلاح تسرب</span>
+                                        <span class="appointment-client">سارة خالد</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- باقي أيام الأسبوع -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="workerEarnings" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-money-bill-wave"></i> الأرباح</h2>
+                    </div>
+                    
+                    <div class="earnings-stats">
+                        <div class="earning-card">
+                            <div class="earning-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="earning-info">
+                                <h3>5,400 جنيه</h3>
+                                <p>إجمالي الأرباح هذا الشهر</p>
+                            </div>
+                        </div>
+
+                        <div class="earning-card">
+                            <div class="earning-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="earning-info">
+                                <h3>18 مهمة</h3>
+                                <p>عدد المهام المكتملة</p>
+                            </div>
+                        </div>
+
+                        <div class="earning-card">
+                            <div class="earning-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="earning-info">
+                                <h3>4.8 / 5</h3>
+                                <p>متوسط التقييم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="earnings-chart">
+                        <h3>إحصائيات الأرباح</h3>
+                        <!-- سيتم إضافة رسم بياني هنا -->
+                        <div class="chart-placeholder">
+                            <p>رسم بياني يظهر تطور الأرباح خلال الشهر</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // دالة للتنقل بين الصفحات الرئيسية
-        function showPage(pageId) {
-            // إخفاء جميع الصفحات
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // إظهار الصفحة المطلوبة
-            document.getElementById(pageId).classList.add('active');
-            
-            // إرجاع الصفحة للأعلى
-            window.scrollTo(0, 0);
-        }
+    <!-- لوحة تحكم المسؤول -->
+    <div id="adminDashboard" class="page">
+        <div class="dashboard-container">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="user-info">
+                        <img src="images/admin-avatar.jpg" alt="صورة المسؤول" class="user-avatar">
+                        <h3>إبراهيم أحمد</h3>
+                        <span class="user-role">مدير النظام</span>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" onclick="showAdminSection('adminStats')">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>الإحصائيات</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showAdminSection('adminComplaints')">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>إدارة البلاغات</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showAdminSection('adminUsers')">
+                        <i class="fas fa-users"></i>
+                        <span>إدارة المستخدمين</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showAdminSection('adminWorkers')">
+                        <i class="fas fa-tools"></i>
+                        <span>إدارة الصناعيين</span>
+                    </a>
+                    <a href="#" class="nav-item" onclick="showAdminSection('adminSettings')">
+                        <i class="fas fa-cog"></i>
+                        <span>الإعدادات</span>
+                    </a>
+                </nav>
+            </div>
 
-        // دالة للتمرير إلى قسم معين
-        function scrollToSection(sectionId) {
-            if (document.getElementById(sectionId)) {
-                document.getElementById(sectionId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        }
+            <div class="dashboard-content">
+                <div id="adminStats" class="dashboard-section active">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-bar"></i> لوحة التحكم</h2>
+                        <div class="date-filter">
+                            <select class="form-control">
+                                <option>هذا الشهر</option>
+                                <option>الشهر الماضي</option>
+                                <option>هذا الأسبوع</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">125</div>
+                                <div class="stat-label">بلاغ جديد</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">45</div>
+                                <div class="stat-label">صنايعي نشط</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">1,250</div>
+                                <div class="stat-label">عميل مسجل</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">85,400</div>
+                                <div class="stat-label">إجمالي المعاملات (جنيه)</div>
+                            </div>
+                        </div>
+                    </div>
 
-        // دالة للتنقل بين أقسام واجهة الساكن
-        function showResidentSection(sectionId) {
-            // إخفاء جميع الأقسام
-            document.querySelectorAll('.resident-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // إظهار القسم المطلوب
-            document.getElementById(sectionId).classList.add('active');
-            
-            // تحديث القائمة الجانبية النشطة
-            document.querySelectorAll('.sidebar-nav a').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            if (sectionId === 'newComplaint') {
-                document.querySelector('.sidebar-nav a:nth-child(1)').classList.add('active');
-            } else if (sectionId === 'myComplaints') {
-                document.querySelector('.sidebar-nav a:nth-child(2)').classList.add('active');
-            }
-        }
+                    <div class="charts-row">
+                        <div class="chart-container">
+                            <h3>البلاغات حسب النوع</h3>
+                            <div class="chart-placeholder">
+                                <p>رسم بياني يظهر توزيع البلاغات حسب النوع</p>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <h3>نشاط الصناعيين</h3>
+                            <div class="chart-placeholder">
+                                <p>رسم بياني يظهر نشاط الصناعيين</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        // دالة للتنقل بين أقسام واجهة الإدارة
-        function showAdminSection(sectionId) {
-            // إخفاء جميع الأقسام
-            document.querySelectorAll('.admin-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // إظهار القسم المطلوب
-            document.getElementById(sectionId).classList.add('active');
-            
-            // تحديث القائمة الجانبية النشطة
-            document.querySelectorAll('.sidebar-nav a').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            if (sectionId === 'dashboard') {
-                document.querySelector('.sidebar-nav a:nth-child(1)').classList.add('active');
-            } else if (sectionId === 'complaints') {
-                document.querySelector('.sidebar-nav a:nth-child(2)').classList.add('active');
-            } else if (sectionId === 'users') {
-                document.querySelector('.sidebar-nav a:nth-child(3)').classList.add('active');
-            }
-        }
+                <div id="adminComplaints" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-exclamation-circle"></i> إدارة البلاغات</h2>
+                        <div class="complaints-filter">
+                            <select class="form-control">
+                                <option>جميع البلاغات</option>
+                                <option>بلاغات جديدة</option>
+                                <option>قيد المعالجة</option>
+                                <option>مكتملة</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="complaints-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>رقم البلاغ</th>
+                                    <th>نوع المشكلة</th>
+                                    <th>العميل</th>
+                                    <th>التاريخ</th>
+                                    <th>الحالة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#00125</td>
+                                    <td>كهرباء</td>
+                                    <td>أحمد محمد</td>
+                                    <td>2024-01-15</td>
+                                    <td><span class="status-badge pending">قيد المراجعة</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">تعيين صنايعي</button>
+                                        <button class="btn btn-sm btn-secondary">تفاصيل</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#00124</td>
+                                    <td>سباكة</td>
+                                    <td>سارة خالد</td>
+                                    <td>2024-01-14</td>
+                                    <td><span class="status-badge in-progress">جاري المعالجة</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">متابعة</button>
+                                        <button class="btn btn-sm btn-secondary">تفاصيل</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-        // معالجة تسجيل الدخول
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const userType = document.getElementById('userType').value;
-            
-            if (!email || !password || !userType) {
-                alert('يرجى ملء جميع الحقول');
-                return;
-            }
-            
-            // في التطبيق الحقيقي، هنا سيتم إرسال البيانات للخادم
-            alert('تم تسجيل الدخول بنجاح!');
-            
-            // التوجيه بناءً على نوع المستخدم
-            if (userType === 'resident') {
-                showPage('residentPage');
-            } else if (userType === 'admin') {
-                showPage('adminPage');
-            }
-        });
-        
-        // معالجة تقديم البلاغ
-        document.getElementById('complaintForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const title = document.getElementById('title').value;
-            const description = document.getElementById('description').value;
-            const problemType = document.getElementById('problemType').value;
-            
-            if (!title || !description || !problemType) {
-                alert('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-            
-            // في التطبيق الحقيقي، هنا سيتم إرسال البيانات للخادم
-            alert('تم تقديم البلاغ بنجاح! سيتم متابعته من قبل الإدارة.');
-            
-            // إعادة تعيين النموذج
-            this.reset();
-        });
+                <div id="adminUsers" class="dashboard-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-users"></i> إدارة المستخدمين</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> إضافة مستخدم
+                        </button>
+                    </div>
+                    
+                    <div class="users-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>نوع الحساب</th>
+                                    <th>تاريخ التسجيل</th>
+                                    <th>الحالة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="images/user-avatar.jpg" alt="صورة المستخدم">
+                                            <span>أحمد محمد</span>
+                                        </div>
+                                    </td>
+                                    <td>ahmed.mohamed@example.com</td>
+                                    <td><span class="user-type resident">ساكن</span></td>
+                                    <td>2024-01-10</td>
+                                    <td><span class="status-badge active">نشط</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">تعديل</button>
+                                        <button class="btn btn-sm btn-danger">حذف</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="images/worker-profile.jpg" alt="صورة الصنايعي">
+                                            <span>محمد أحمد</span>
+                                        </div>
+                                    </td>
+                                    <td>mohamed.ahmed@example.com</td>
+                                    <td><span class="user-type worker">صنايعي</span></td>
+                                    <td>2024-01-08</td>
+                                    <td><span class="status-badge active">نشط</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">تعديل</button>
+                                        <button class="btn btn-sm btn-danger">حذف</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // معالجة رابط التسجيل
-        document.getElementById('registerLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('سيتم توجيهك إلى صفحة التسجيل - هذه الميزة قيد التطوير');
-        });
+    <!-- صفحة نسيان كلمة المرور -->
+    <div id="forgotPasswordPage" class="page">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h2><i class="fas fa-key"></i> استعادة كلمة المرور</h2>
+                    <p>أدخل بريدك الإلكتروني لاستعادة حسابك</p>
+                </div>
 
-        // تفعيل القائمة المتنقلة
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+                <form id="forgotPasswordForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="recoveryEmail"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                        <input type="email" id="recoveryEmail" class="form-control" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> إرسال رابط الاستعادة
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>تذكرت كلمة المرور؟ <a href="#" onclick="showLogin()">سجل دخول</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
