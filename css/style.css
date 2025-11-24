@@ -1,6 +1,5 @@
 /* ===== متغيرات التصميم ===== */
 :root {
-  /* الألوان الرئيسية */
   --primary-color: #2563eb;
   --primary-dark: #1d4ed8;
   --secondary-color: #10b981;
@@ -8,8 +7,6 @@
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --success-color: #10b981;
-  
-  /* الألوان المحايدة */
   --dark-color: #1f2937;
   --gray-800: #374151;
   --gray-600: #6b7280;
@@ -17,13 +14,9 @@
   --gray-200: #e5e7eb;
   --gray-100: #f3f4f6;
   --white: #ffffff;
-  
-  /* الظلال */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  
-  /* الأنيميشن */
   --transition: all 0.3s ease;
   --border-radius: 8px;
   --border-radius-lg: 12px;
@@ -159,6 +152,15 @@ body {
   color: var(--white);
 }
 
+.btn-success {
+  background: var(--success-color);
+  color: var(--white);
+}
+
+.btn-success:hover {
+  background: #059669;
+}
+
 .btn-danger {
   background: var(--danger-color);
   color: var(--white);
@@ -166,6 +168,15 @@ body {
 
 .btn-danger:hover {
   background: #dc2626;
+}
+
+.btn-warning {
+  background: var(--warning-color);
+  color: var(--white);
+}
+
+.btn-warning:hover {
+  background: #d97706;
 }
 
 .btn-large {
@@ -183,22 +194,38 @@ body {
   font-size: 0.8rem;
 }
 
-.btn-google {
-  background: #db4437;
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-back:hover {
+  color: var(--primary-color);
+}
+
+.btn-change-avatar {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background: var(--primary-color);
   color: white;
-}
-
-.btn-google:hover {
-  background: #c1351d;
-}
-
-.btn-facebook {
-  background: #4267b2;
-  color: white;
-}
-
-.btn-facebook:hover {
-  background: #365899;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
 }
 
 /* ===== قسم الهيرو ===== */
@@ -271,6 +298,95 @@ body {
 
 .auth-form {
   margin-bottom: 1.5rem;
+}
+
+/* ===== حسابات تجريبية ===== */
+.demo-accounts {
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-right: 4px solid var(--accent-color);
+}
+
+.demo-accounts h4 {
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.demo-account {
+  background: var(--white);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--gray-200);
+}
+
+.demo-account:last-child {
+  margin-bottom: 0;
+}
+
+.demo-account strong {
+  color: var(--primary-color);
+}
+
+/* ===== صفحة النجاح ===== */
+.success-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--success-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.success-icon i {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.success-content h2 {
+  color: var(--success-color);
+  margin-bottom: 1rem;
+}
+
+.success-content p {
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.success-info {
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--gray-700);
+  margin-bottom: 0.75rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item i {
+  color: var(--primary-color);
+  width: 20px;
 }
 
 /* ===== النماذج ===== */
@@ -397,15 +513,27 @@ body {
 
 .user-info {
   text-align: center;
+  position: relative;
 }
 
 .user-avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 3px solid var(--primary-color);
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--white);
+  font-size: 2rem;
+  position: relative;
+}
+
+.user-avatar.large {
+  width: 120px;
+  height: 120px;
+  font-size: 3rem;
 }
 
 .user-info h3 {
@@ -488,6 +616,19 @@ body {
   color: var(--primary-color);
 }
 
+/* ===== مربع البحث ===== */
+.search-box {
+  width: 300px;
+}
+
+.search-box .form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239ca3af'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  background-size: 1rem;
+  padding-left: 2.5rem;
+}
+
 /* ===== كروت البلاغات ===== */
 .complaints-list {
   display: flex;
@@ -543,9 +684,9 @@ body {
   color: var(--success-color);
 }
 
-.status-badge.active {
-  background: #d1fae5;
-  color: var(--success-color);
+.status-badge.accepted {
+  background: #ddd6fe;
+  color: #7c3aed;
 }
 
 .complaint-desc {
@@ -568,6 +709,115 @@ body {
   border-radius: var(--border-radius);
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.complaint-urgency {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.urgency-low { color: var(--success-color); }
+.urgency-medium { color: var(--warning-color); }
+.urgency-high { color: var(--accent-color); }
+.urgency-emergency { color: var(--danger-color); }
+
+/* ===== كروت الطلبات ===== */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-right: 4px solid var(--accent-color);
+  transition: var(--transition);
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.order-header h4 {
+  color: var(--dark-color);
+  font-size: 1.1rem;
+}
+
+.order-price {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.order-desc {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.order-client {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.order-client .user-avatar {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.order-client .client-info h5 {
+  color: var(--dark-color);
+  margin-bottom: 0.25rem;
+}
+
+.order-client .client-info span {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-date {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.order-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ===== فلتر الطلبات ===== */
+.orders-filter, .earnings-period {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.orders-filter select, .earnings-period select {
+  min-width: 150px;
 }
 
 /* ===== نماذج البلاغات ===== */
@@ -684,177 +934,6 @@ body {
   font-size: 0.9rem;
 }
 
-.service-workers {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.worker-avatar {
-  text-align: center;
-}
-
-.worker-avatar img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.worker-avatar span {
-  font-size: 0.8rem;
-  color: var(--gray-600);
-  display: block;
-}
-
-/* ===== كروت الطلبات ===== */
-.orders-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.order-card {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  border-right: 4px solid var(--accent-color);
-  transition: var(--transition);
-}
-
-.order-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.order-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.75rem;
-}
-
-.order-header h4 {
-  color: var(--dark-color);
-  font-size: 1.1rem;
-}
-
-.order-price {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.order-desc {
-  color: var(--gray-600);
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.order-client {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background: var(--gray-100);
-  border-radius: var(--border-radius);
-}
-
-.order-client img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.client-info h5 {
-  color: var(--dark-color);
-  margin-bottom: 0.25rem;
-}
-
-.client-info span {
-  color: var(--gray-600);
-  font-size: 0.9rem;
-}
-
-.order-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.order-date {
-  color: var(--gray-600);
-  font-size: 0.9rem;
-}
-
-.order-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* ===== شبكة الإحصائيات ===== */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.stat-card {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--primary-color);
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.stat-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.stat-icon i {
-  font-size: 1.5rem;
-  color: var(--white);
-}
-
-.stat-info {
-  flex: 1;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--dark-color);
-  margin-bottom: 0.25rem;
-}
-
-.stat-label {
-  color: var(--gray-600);
-  font-size: 0.9rem;
-}
-
 /* ===== الملف الشخصي ===== */
 .profile-container {
   background: var(--white);
@@ -871,35 +950,17 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--gray-200);
+  position: relative;
 }
 
 .profile-avatar {
   text-align: center;
   position: relative;
+  flex-shrink: 0;
 }
 
-.profile-avatar img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--primary-color);
-}
-
-.btn-change-avatar {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--gray-200);
-  color: var(--gray-700);
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: var(--transition);
-}
-
-.btn-change-avatar:hover {
-  background: var(--gray-300);
+.profile-info {
+  flex: 1;
 }
 
 .profile-info h3 {
@@ -920,43 +981,161 @@ body {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
-.worker-stats {
+.profile-stats, .worker-stats {
   display: flex;
   gap: 2rem;
   margin-top: 1rem;
 }
 
-.worker-stats .stat {
+.profile-stats .stat, .worker-stats .stat {
   text-align: center;
 }
 
-.worker-stats .stat-number {
+.profile-stats .stat-number, .worker-stats .stat-number {
   font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 0.25rem;
+  display: block;
 }
 
-.worker-stats .stat-label {
+.profile-stats .stat-label, .worker-stats .stat-label {
   font-size: 0.8rem;
   color: var(--gray-600);
 }
 
-.services-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* ===== خدمات الصنايعي ===== */
+.services-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
   margin-top: 0.5rem;
 }
 
-.service-tag {
+.service-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
   background: var(--gray-100);
-  color: var(--gray-700);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.service-checkbox:hover {
+  background: var(--gray-200);
+}
+
+.service-checkbox input {
+  margin: 0;
+}
+
+.service-checkbox span {
+  font-size: 0.9rem;
+}
+
+/* ===== إجراءات النموذج ===== */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* ===== جدول المواعيد ===== */
+.schedule-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.schedule-calendar {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.calendar-header h4 {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.day-column {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  min-height: 200px;
+}
+
+.day-header {
+  background: var(--gray-100);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-color);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.appointments {
+  padding: 0.5rem;
+  min-height: 150px;
+}
+
+.appointment {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
-  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 3px solid var(--accent-color);
+}
+
+.appointment:hover {
+  background: var(--primary-dark);
+  transform: translateX(-5px);
+}
+
+.appointment-time {
+  font-weight: 600;
+  display: block;
+  font-size: 0.7rem;
+}
+
+.appointment-title {
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+}
+
+.appointment-client {
+  font-size: 0.7rem;
+  opacity: 0.9;
 }
 
 /* ===== الأرباح والإحصائيات ===== */
@@ -976,6 +1155,7 @@ body {
   align-items: center;
   gap: 1.5rem;
   transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
 }
 
 .earning-card:hover {
@@ -1023,87 +1203,79 @@ body {
   font-size: 1.2rem;
 }
 
-.chart-placeholder {
-  background: var(--gray-100);
-  border-radius: var(--border-radius);
-  padding: 3rem;
-  text-align: center;
-  color: var(--gray-600);
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-/* ===== الجداول ===== */
-.complaints-table, .users-table {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.complaints-table table, .users-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.complaints-table th, .users-table th {
-  background: var(--gray-100);
-  padding: 1rem;
-  text-align: right;
-  font-weight: 600;
-  color: var(--dark-color);
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.complaints-table td, .users-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--gray-200);
-  color: var(--gray-700);
-}
-
-.complaints-table tr:last-child td, .users-table tr:last-child td {
-  border-bottom: none;
-}
-
-.complaints-table tr:hover, .users-table tr:hover {
-  background: var(--gray-50);
-}
-
-.user-cell {
+.earnings-summary {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
 }
 
-.user-cell img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.user-type {
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
+.summary-item .label {
+  color: var(--gray-600);
   font-weight: 500;
 }
 
-.user-type.resident {
-  background: #dbeafe;
+.summary-item .value {
   color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-.user-type.worker {
-  background: #fef3c7;
-  color: #d97706;
+.recent-earnings {
+  background: var(--gray-100);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
 }
 
-.user-type.admin {
-  background: #d1fae5;
+.recent-earnings h4 {
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.earnings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.earning-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--success-color);
+}
+
+.earning-item .amount {
   color: var(--success-color);
+  font-weight: 600;
 }
 
-/* ===== قسم عن المنصة ===== */
-.about-section {
+.earning-item .date {
+  color: var(--gray-600);
+  font-size: 0.8rem;
+}
+
+/* ===== أقسام إضافية ===== */
+.services-section, .about-section {
   padding: 4rem 2rem;
   background: var(--white);
 }
@@ -1138,8 +1310,8 @@ body {
 }
 
 .features-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -1156,9 +1328,9 @@ body {
 }
 
 .about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .about-stats .stat {
@@ -1175,14 +1347,15 @@ body {
 }
 
 .about-stats .stat-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .about-stats .stat-label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--gray-600);
   font-weight: 500;
 }
@@ -1200,6 +1373,10 @@ body {
   .about-content {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  
+  .chart-container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1249,10 +1426,6 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .social-buttons {
     flex-direction: column;
   }
@@ -1266,17 +1439,33 @@ body {
     text-align: center;
   }
   
-  .worker-stats {
-    justify-content: center;
+  .features-list {
+    grid-template-columns: 1fr;
   }
   
-  .earning-card {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .earnings-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-box {
+    width: 100%;
+  }
+  
+  .schedule-actions {
     flex-direction: column;
-    text-align: center;
+    width: 100%;
   }
   
-  .complaints-table, .users-table {
-    overflow-x: auto;
+  .schedule-actions .btn {
+    width: 100%;
   }
 }
 
@@ -1294,10 +1483,7 @@ body {
     padding: 1rem;
   }
   
-  .complaint-card,
-  .order-card,
-  .stat-card,
-  .earning-card {
+  .complaint-card, .order-card {
     padding: 1rem;
   }
   
@@ -1305,8 +1491,21 @@ body {
     font-size: 2rem;
   }
   
-  .about-section {
+  .services-section, .about-section {
     padding: 2rem 1rem;
+  }
+  
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .earning-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form-actions {
+    flex-direction: column;
   }
 }
 
@@ -1324,17 +1523,6 @@ body {
 
 .page.active {
   animation: fadeIn 0.5s ease;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 /* ===== نظام الإشعارات ===== */
@@ -1386,6 +1574,17 @@ body {
   padding: 0.25rem;
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* ===== شريط التمرير المخصص ===== */
 ::-webkit-scrollbar {
   width: 8px;
@@ -1404,105 +1603,36 @@ body {
   background: var(--gray-600);
 }
 
-/* ===== فلتر الطلبات ===== */
-.orders-filter, .complaints-filter, .date-filter {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.orders-filter select, .complaints-filter select, .date-filter select {
-  min-width: 150px;
-}
-
-/* ===== جدول المواعيد ===== */
-.schedule-calendar {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.schedule-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 1rem;
-}
-
-.day-column {
-  border: 1px solid var(--gray-200);
-  border-radius: var(--border-radius);
-}
-
-.day-header {
-  background: var(--gray-100);
-  padding: 1rem;
+/* ===== حالة عدم وجود بيانات ===== */
+.no-data {
   text-align: center;
-  font-weight: 600;
-  color: var(--dark-color);
-  border-bottom: 1px solid var(--gray-200);
+  padding: 3rem;
+  color: var(--gray-600);
 }
 
-.appointments {
-  padding: 0.5rem;
-  min-height: 120px;
+.no-data i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--gray-400);
 }
 
-.appointment {
-  background: var(--primary-color);
-  color: white;
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  margin-bottom: 0.5rem;
-  font-size: 0.8rem;
-}
-
-.appointment-time {
-  font-weight: 600;
-  display: block;
-}
-
-.appointment-title {
-  display: block;
-  margin: 0.25rem 0;
-}
-
-.appointment-client {
-  font-size: 0.7rem;
-  opacity: 0.9;
-}
-
-/* ===== الرسوم البيانية ===== */
-.charts-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.chart-container {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.chart-container h3 {
-  color: var(--dark-color);
+.no-data p {
   margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.no-appointments {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--gray-500);
+  font-size: 0.9rem;
 }
 
 /* ===== تأثيرات خاصة ===== */
+.service-card:nth-child(1) .service-icon {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
 .service-card:nth-child(2) .service-icon {
   background: linear-gradient(135deg, var(--secondary-color), #059669);
 }
@@ -1511,22 +1641,26 @@ body {
   background: linear-gradient(135deg, var(--accent-color), #d97706);
 }
 
-.stat-card:nth-child(2) .stat-icon {
-  background: linear-gradient(135deg, var(--secondary-color), #059669);
-}
-
-.stat-card:nth-child(3) .stat-icon {
-  background: linear-gradient(135deg, var(--accent-color), #d97706);
-}
-
-.stat-card:nth-child(4) .stat-icon {
+.service-card:nth-child(4) .service-icon {
   background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
-.earning-card:nth-child(2) .earning-icon {
-  background: linear-gradient(135deg, var(--secondary-color), #059669);
+.service-card:nth-child(5) .service-icon {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
 }
 
-.earning-card:nth-child(3) .earning-icon {
-  background: linear-gradient(135deg, var(--accent-color), #d97706);
+.service-card:nth-child(6) .service-icon {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.earning-card:nth-child(1) {
+  border-left-color: var(--primary-color);
+}
+
+.earning-card:nth-child(2) {
+  border-left-color: var(--secondary-color);
+}
+
+.earning-card:nth-child(3) {
+  border-left-color: var(--accent-color);
 }
